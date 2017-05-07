@@ -132,7 +132,6 @@ void setup() {
   Serial.printf("MAC: %s, IP: %s\n", WiFi.macAddress().c_str(), WiFi.localIP().toString().c_str());
 
   while (!setup_mqtt_connection()) {
-    Serial.print(".");
     blink(BLINK_SLOWLY);
   }
 }
